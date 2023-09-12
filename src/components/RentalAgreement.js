@@ -15,6 +15,11 @@ const styles = StyleSheet.create({
     border: '2px solid gray',
     borderRadius: '5px',
   },
+  section2: {
+    margin: 20,
+    flexGrow: 1,
+    flex: 1,
+  },
   flex: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
@@ -38,6 +43,33 @@ const styles = StyleSheet.create({
   detailSection: {
     borderTop: '2px solid gray',
     flexDirection: 'row',
+  },
+  subList: {
+    marginLeft: 15,
+  },
+  tableHead: {
+    fontSize: 9,
+    color: 'grey',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  tableCell: {
+    border: `1px solid gray`,
+    height: '25px',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '4px'
+  },
+  tableText: {
+    fontSize: 9,
+    color: 'grey',
+    fontWeight: 'bold',
+  },
+  box: {
+    borderRight: '1px solid grey',
+    width: '20px',
+    height: '20px'
   }
 });
 
@@ -45,6 +77,8 @@ function RentalAgreement() {
 
   return (
     <Document>
+
+      {/* ========== Page 1 ========== */}
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
 
@@ -393,6 +427,389 @@ function RentalAgreement() {
 
         </View>
       </Page>
+
+      {/* ========== Page 2 ========== */}
+      <Page size="A4" style={styles.page}>
+        <View style={styles.section2}>
+
+          {/* ========== Additional Optional Products ========== */}
+          <Text style={{ fontSize: 18, fontWeight: 'extrabold', color: 'grey', textAlign: 'center', textDecoration: 'underline', textDecorationColor: 'grey' }}>Additional Optional Products</Text>
+          <View style={{ margin: '10px 0px' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                The products listed on this page below are additional optional products that we offer to enhance your rental experience.
+              </Text>
+            </View>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                The cost (inclusive of VAT) for any additional optional products you chose to buy at the booking stage (if any) will be
+              </Text>
+            </View>
+            <View style={{ ...styles.subList, flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                Shown on the Rental Agreement overleaf and included in the Rental Price Estimated; and
+              </Text>
+            </View>
+            <View style={{ ...styles.subList, flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                be included in any prepayment you may have made at the booking stage (if any); and
+              </Text>
+            </View>
+            <View style={{ ...styles.subList, flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                will not be refundable when you return the Vehicle to us
+              </Text>
+            </View>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                The cost (inclusive of VAT) for any additional optional products you choose to buy at pick up will be:
+              </Text>
+            </View>
+            <View style={{ ...styles.subList, flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                Shown on the Rental Agreement overleaf and included in the Rental Price Estimated; and
+              </Text>
+            </View>
+            <View style={{ ...styles.subList, flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                be included in any prepayment you may have made at the booking stage (if any); and
+              </Text>
+            </View>
+            <View style={{ ...styles.subList, flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 12, color: 'grey', marginRight: 10 }}>•</Text>
+              <Text style={{ ...styles.paragraph, color: 'grey' }}>
+                will not be refundable when you return the Vehicle to us
+              </Text>
+            </View>
+          </View>
+          <Text style={{ fontSize: 10, fontWeight: 'extrabold', color: 'grey', margin: '6px 0px' }}>VEHICLE UPGRADE</Text>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5px' }}>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}>Product</Text>
+              <Text style={styles.tableHead}>Number</Text>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>1</Text>
+              </View>
+            </View>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}> </Text>
+              <Text style={styles.tableHead}>Vehicle Upgrade from</Text>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}> </Text>
+              </View>
+            </View>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}> </Text>
+              <Text style={styles.tableHead}>Vehicle Upgrade to</Text>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}> </Text>
+              </View>
+            </View>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}> </Text>
+              <Text style={styles.tableHead}>Number of days</Text>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}> </Text>
+              </View>
+            </View>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}>Vehicle Upgrade</Text>
+              <Text style={styles.tableHead}>DAILY RATE</Text>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+            </View>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}>Vehicle Upgrade</Text>
+              <Text style={styles.tableHead}>TOTAL CHARGE</Text>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+            </View>
+          </View>
+          <Text style={{ ...styles.heading, color: 'grey', marginTop: '5px' }}>
+            I agree to this upgrade. I accept that my original booked vehicle was available but I have chosen to pay extra for a different one
+          </Text>
+          <Text style={{ fontSize: 10, fontWeight: 'extrabold', color: 'grey', margin: '10px 0px' }}>OTHER AVAILABLE OPTIONAL PRODUCTS</Text>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', margin: '5px 0px' }}>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}>Product</Text>
+              <Text style={styles.tableHead}>Number</Text>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>2</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>3</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>4</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>5</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>6</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>7</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>8</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>10</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>11</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>12</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>13</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>14</Text>
+              </View>
+              <View style={styles.tableCell}>
+                <Text style={styles.tableText}>15</Text>
+              </View>
+            </View>
+            <View style={{ width: '50%' }}>
+              <Text style={styles.tableHead}> </Text>
+              <Text style={styles.tableHead}>PRODUCT</Text>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <View>
+                  <Text style={styles.tableText}>Collision Damage Wavier</Text>
+                  <Text style={{ ...styles.tableText, fontSize: 7 }}>(Collision Damage Wavier)</Text>
+                </View>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <View>
+                  <Text style={styles.tableText}>Collision Damage Wavier</Text>
+                  <Text style={{ ...styles.tableText, fontSize: 7 }}>(Collision Damage Wavier)</Text>
+                </View>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>Collision Damage Wavier</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <View>
+                  <Text style={styles.tableText}>Collision Damage Wavier</Text>
+                  <Text style={{ ...styles.tableText, fontSize: 7 }}>(Collision Damage Wavier)</Text>
+                </View>
+              </View>
+            </View>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}> </Text>
+              <Text style={styles.tableHead}>DAILY RATE</Text>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+            </View>
+            <View style={{ width: '17%' }}>
+              <Text style={styles.tableHead}>TOTAL PRODUCT</Text>
+              <Text style={styles.tableHead}>CHARGE</Text>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+              <View style={{ ...styles.tableCell, justifyContent: 'flex-start' }}>
+                <Text style={styles.tableText}>£</Text>
+              </View>
+            </View>
+          </View>
+          <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', margin: '8px 0px' }}>
+            <View>
+              <Text style={styles.tableHead}>
+                Product
+              </Text>
+              <Text style={styles.tableHead}>
+                Number
+              </Text>
+            </View>
+            <View style={{ border: '1px solid grey', flexDirection: 'row' }}>
+              <View style={styles.box}></View>
+              <View style={styles.box}></View>
+              <View style={styles.box}></View>
+              <View style={styles.box}></View>
+              <View style={styles.box}></View>
+              <View style={styles.box}></View>
+              <View style={styles.box}></View>
+              <View style={styles.box}></View>
+              <View style={{ ...styles.box, border: 'none' }}></View>
+            </View>
+          </View>
+          <View style={{ flexDirection: 'row', margin: '8px 0px' }}>
+            <View style={{ width: '50%', padding: '2px 4px', borderRight: '1px dashed gray' }}>
+              <Text style={{ ...styles.heading, color: 'grey', height: '50px' }}>
+                I have explained all of the additional optional products chosen by the customer referenced by product number in the grid above.
+              </Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', margin: '8px 0px' }}>
+                <View>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Europcar Agent
+                  </Text>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Print Name
+                  </Text>
+                </View>
+                <Text style={{ ...styles.heading, color: 'grey' }}>
+                  _____________________________________
+                </Text>
+              </View>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', margin: '8px 0px' }}>
+                <View>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Europcar Agent
+                  </Text>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Signature
+                  </Text>
+                </View>
+                <Text style={{ ...styles.heading, color: 'grey' }}>
+                  _____________________________________
+                </Text>
+              </View>
+            </View>
+            <View style={{ width: '50%', padding: '2px 4px' }}>
+              <Text style={{ ...styles.heading, color: 'grey', height: '50px' }}>
+                I confirm that I have chosen to buy the additional optional products referenced by product number in the grid above (in addition to those I included in my reservation (if any); and that I agree and will pay the total charges stated for them both here and overleaf.
+              </Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', margin: '8px 0px' }}>
+                <View>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Customer
+                  </Text>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Print Name
+                  </Text>
+                </View>
+                <Text style={{ ...styles.heading, color: 'grey' }}>
+                  _____________________________________
+                </Text>
+              </View>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', margin: '8px 0px' }}>
+                <View>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Europcar Agent
+                  </Text>
+                  <Text style={{ ...styles.heading, color: 'grey' }}>
+                    Signature
+                  </Text>
+                </View>
+                <Text style={{ ...styles.heading, color: 'grey' }}>
+                  _____________________________________
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </Page>
+
     </Document>
   )
 }
